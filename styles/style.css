@@ -22,38 +22,38 @@
 .header {
   display: grid;
   grid-template-columns: 1fr 148px 1fr;
-  padding: 90px 50px 96px;
+  padding: 90px 50px 90px;
 }
 
 .header__menu {
-  align-self: center;
   justify-self: start;
+  align-self: center;
 }
 
 .header__links-list {
   display: flex;
-  list-style: circle;
   column-gap: 33px;
+  list-style: circle;
 }
 
 .header__links-list-item {
   color: #000;
   font-family: 'Raleway', Arial, Helvetica, sans-serif;
+  font-weight: 400;
   font-size: 18px;
   font-style: normal;
-  font-weight: 400;
   line-height: normal;
 }
 
-.header__links-list-item::marker {}
+/* .header__links-list-item::marker {} */
 
 .header__links-list-item:first-child {
   list-style: none;
 }
 
 .header__link {
-  text-decoration: none;
   border-bottom: 2px solid #000;
+  text-decoration: none;
 }
 
 .header__link_active {
@@ -61,8 +61,8 @@
 }
 
 .header__logo {
-  width: 148px;
   align-self: stretch;
+  width: 148px;
 }
 
 .header__logo-image {
@@ -72,14 +72,123 @@
 .address {
   color: #000;
   font-family: 'Raleway', Arial, Helvetica, sans-serif;
+  font-weight: 400;
   font-size: 18px;
   font-style: normal;
-  font-weight: 400;
   line-height: 24.3px;
   /* 135% */
 }
 
 .header__address {
-  align-self: center;
   justify-self: end;
+  align-self: center;
+}
+
+/* Рекомендуемые имена классов
+
+    cover — вся секция;
+    overlay — полупрозрачный блок поверх секции;
+    cover__title — заголовок;
+    aligned-text, aligned-text_center и aligned-text_right — классы для выравнивания строк текста и превращения их в блочный элемент;
+    letter-spacing-extended — класс для управления межбуквенным расстоянием в местах, где есть эти акценты;
+    no-letter-spacing — класс для обнуления общего межбуквенного расстояния для последней буквы;
+    cover__description — контейнер для подзаголовка и кнопки;
+    cover__description-text — текст подзаголовка;
+    bet-button — кнопка «Сделать ставку». */
+
+.aligned-text {
+  display: block;
+}
+
+.aligned-text_center {
+  text-align: center;
+}
+
+.aligned-text_right {
+  text-align: right;
+}
+
+.letter-spacing-extended {
+  letter-spacing: 60px;
+}
+
+.no-letter-spacing {
+  letter-spacing: 0;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  opacity: 0.6;
+  background: #000;
+}
+
+.cover {
+  position: relative;
+  padding: 160px 50px 50px 50px;
+  background-image: url("../images/cover.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.cover__title {
+  position: relative;
+  z-index: 2;
+  margin-bottom: 120px;
+  color: #FFF;
+  font-family: 'Raleway', Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 100px;
+  font-style: normal;
+  line-height: 125%;
+  /* 115px */
+  letter-spacing: 30px;
+  text-transform: uppercase;
+}
+
+.cover__description {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  column-gap: 78px;
+}
+
+.cover__description-text {
+  color: #FFF;
+  text-align: center;
+  font-family: 'Raleway', Arial, Helvetica, sans-serif;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px;
+  /* 127.273% */
+  text-transform: uppercase;
+  word-spacing: 18px;
+  z-index: 2;
+  align-self: center;
+}
+
+.bet-button {
+  padding: 12px 32px;
+  color: #FFF;
+  text-align: center;
+  font-family: 'Raleway', Arial, Helvetica, sans-serif;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+  background-color: transparent;
+  border: 1px solid #fff;
+  z-index: 2;
+}
+
+.bet-button:hover {
+  cursor: pointer;
+  opacity: .8;
 }
