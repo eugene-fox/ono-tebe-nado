@@ -52,7 +52,7 @@
 }
 
 .header__link {
-  border-bottom: 2px solid #000;
+  border-bottom: 1px solid #000;
   text-decoration: none;
 }
 
@@ -159,36 +159,283 @@
 }
 
 .cover__description-text {
+  z-index: 2;
+  align-self: center;
   color: #FFF;
-  text-align: center;
   font-family: 'Raleway', Arial, Helvetica, sans-serif;
+  font-weight: 400;
   font-size: 22px;
   font-style: normal;
-  font-weight: 400;
   line-height: 28px;
+  text-align: center;
   /* 127.273% */
   text-transform: uppercase;
   word-spacing: 18px;
-  z-index: 2;
-  align-self: center;
 }
 
 .bet-button {
+  z-index: 2;
+  border: 1px solid #fff;
   padding: 12px 32px;
   color: #FFF;
-  text-align: center;
   font-family: 'Raleway', Arial, Helvetica, sans-serif;
+  font-weight: 400;
   font-size: 22px;
   font-style: normal;
-  font-weight: 400;
   line-height: normal;
+  text-align: center;
   text-transform: uppercase;
   background-color: transparent;
-  border: 1px solid #fff;
-  z-index: 2;
 }
 
 .bet-button:hover {
-  cursor: pointer;
   opacity: .8;
+  cursor: pointer;
 }
+
+/*
+Рекомендуемые имена классов
+
+    lots — вся секция;
+    lots__heading — заголовок секции;
+    lots__card-list — список карточек;
+    lots__card-list-item — пункт списка карточки;
+    card-link — ссылка, обрамляющая карточку;
+    card — карточка;
+    card_type_film, card_type_book и card_type_picture — классы, чтобы задать определённый фон каждой из карточек;
+    overlay — он уже есть у вас в коде;
+    card__title — заголовок карточки;
+    card__text — текст карточки;
+    lots__look-more-link — ссылка «Посмотреть больше».*/
+
+.lots {
+  padding: 180px 50px 0;
+}
+
+.lots__heading {
+  margin: 0 0 27px 40px;
+  margin-bottom: 27px;
+  color: #000;
+  font-family: 'Raleway', Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  font-style: normal;
+  line-height: normal;
+  text-transform: uppercase;
+
+}
+
+.lots__card-list {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 25px;
+  margin-bottom: 30px;
+  list-style: none;
+}
+
+.lots__card-list-item {
+  flex-basis: 430px;
+  min-height: 450px;
+}
+
+.lots__look-more-link {
+  display: inline-block;
+  margin-left: 40px;
+  border-bottom: 1px solid #000;
+  color: #000;
+  font-family: 'Raleway', Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  font-style: normal;
+  line-height: normal;
+  text-decoration: none;
+}
+
+.card-link {
+  text-decoration: none;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  row-gap: 30px;
+  height: 100%;
+  padding: 50px 40px;
+}
+
+.card_type_film {
+  background-image: url("../images/card-lot-01.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.card_type_book {
+  background-image: url("../images/card-lot-02.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.card_type_picture {
+  background-image: url("../images/card-lot-03.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.card__title {
+  position: relative;
+  z-index: 2;
+  color: #FFF;
+  font-family: 'Raleway', Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  font-style: normal;
+  line-height: 120%;
+  /* 26.4px */
+  text-decoration-line: underline;
+  text-transform: uppercase;
+}
+
+.card__text {
+  position: relative;
+  /* 24px */
+  z-index: 2;
+  color: #FFF;
+  font-family: 'Raleway', Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  font-style: normal;
+  line-height: 120%;
+}
+
+/*
+Рекомендуемые имена классов
+
+    about — вся секция;
+    about__column — класс для колонок;
+    about__logo — контейнер с логотипом;
+    about__logo-image — изображение логотипа;
+    about__title — заголовок секции;
+    about__text — блок для текстов секции.
+
+Другие классы мы не использовали, но вам они могут понадобиться. У задачи несколько решений. Это нормально в гибком мире лэйаутов.
+*/
+
+.about {
+  display: grid;
+  grid-template-columns: 430px 1fr;
+  grid-template-rows: minmax(240px, min-content) 1fr;
+  column-gap: 25px;
+  padding: 181px 50px 100px;
+}
+
+.about__column {
+  display: flex;
+  flex-direction: column;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  row-gap: 25px;
+}
+
+.about__logo {
+  justify-self: center;
+  align-self: center;
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  padding: 63px 46px;
+  background-color: #000;
+
+}
+
+.about__logo-image {
+  width: 100%;
+}
+
+.about__title {
+  align-self: center;
+  color: #000;
+  font-family: 'Raleway', Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  font-style: normal;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.about__text {
+  color: #000;
+  font-family: 'Raleway', Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  font-style: normal;
+  line-height: normal;
+}
+
+/*
+Рекомендуемые имена классов
+
+    footer — подвал;
+    address — такой класс уже есть в вашей вёрстке, все вложенные элементы аналогичны;
+    footer__menu — блок навигации по списку ссылок. Мы рекомендуем окружать список тегом <nav> с этим классом;
+    footer__menu-list — список пунктов меню;
+    footer__menu-list-item — пункт списка меню;
+    footer__menu-link — ссылка меню;
+    footer__menu-link_active — активная ссылка меню (без подчеркивания);
+    footer__social-list — список ссылок на социальные сети. Можно не добавлять тег <nav>, потому что это ссылки на внешние ресурсы;
+    footer__social-list-item — пункт списка ссылок на социальные сети;
+    footer__social-link — ссылка на социальные сети;
+    footer__social-icon – иконка социальной сети.
+*/
+
+.footer {
+  display: grid;
+  grid-template-columns: 1fr max-content 1fr;
+  padding: 80px 50px 90px;
+}
+
+.footer__menu {}
+
+.footer__menu-list {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+}
+
+.footer__menu-list {
+  text-align: center;
+}
+
+.footer__menu-link {
+  border-bottom: 1px solid #000;
+  color: #000;
+  font-family: 'Raleway', Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  font-style: normal;
+  line-height: normal;
+  text-align: center;
+  text-decoration: none;
+}
+
+.footer__menu-link_active {
+  border-bottom: none;
+}
+
+.footer__social-list {
+  display: flex;
+  justify-content: end;
+  column-gap: 48px;
+  list-style: none;
+}
+
+.footer__social-list-item {
+  flex-basis: 48px;
+}
+
+.footer__social-link {}
+
+.footer__social-icon {}
