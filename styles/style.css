@@ -397,7 +397,7 @@
   padding: 80px 50px 90px;
 }
 
-.footer__menu {}
+/* .footer__menu {} */
 
 .footer__menu-list {
   display: flex;
@@ -405,7 +405,7 @@
   list-style: none;
 }
 
-.footer__menu-list {
+.footer__menu-list-item {
   text-align: center;
 }
 
@@ -436,6 +436,6 @@
   flex-basis: 48px;
 }
 
-.footer__social-link {}
+/* .footer__social-link {}
 
-.footer__social-icon {}
+.footer__social-icon {} */
